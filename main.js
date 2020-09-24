@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable consistent-return */
 /* eslint-disable no-param-reassign */
 const express = require('express');
@@ -33,7 +34,6 @@ app.get('/product', (req, res) => {
 });
 
 // Get single product
-// eslint-disable-next-line consistent-return
 app.get('/product/:id', (req, res) => {
   const found = products.some((val) => val.id === parseInt(req.params.id, 10));
 
@@ -44,7 +44,7 @@ app.get('/product/:id', (req, res) => {
   }
 
   const product = products.find((element) => element.id === parseInt(req.params.id, 10));
-  return res.status(200).json({
+  res.status(200).json({
     data: product,
   });
 });
@@ -71,7 +71,6 @@ app.put('/product/:id', (req, res) => {
     });
   }
 
-  // eslint-disable-next-line array-callback-return
   products.map((value) => {
     if (value.id === parseInt(req.params.id, 10)) {
       value.name = req.body.name;
