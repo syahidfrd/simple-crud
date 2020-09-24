@@ -43,7 +43,7 @@ app.get('/product/:id', (req, res) => {
     });
   }
 
-  const product = products.filter((element) => element.id === parseInt(req.params.id, 10));
+  const product = products.find((element) => element.id === parseInt(req.params.id, 10));
   return res.status(200).json({
     data: product,
   });
