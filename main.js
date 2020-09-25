@@ -1,6 +1,3 @@
-/* eslint-disable array-callback-return */
-/* eslint-disable consistent-return */
-/* eslint-disable no-param-reassign */
 const express = require('express');
 
 const app = express();

@@ -3,7 +3,11 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "no-unused-vars": "warn",
-    "no-console": "off"
+    "no-console": "off",
+    "no-useless-catch": "off",
+    "no-undef": "off",
+    "array-callback-return": "off",
+    "consistent-return": "off",
+    "no-param-reassign": "off"
   }
 }
